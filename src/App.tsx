@@ -5,7 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [completedTaskCount, setCompletedTaskCount] = useState(0)
 
   return (
     <>
@@ -18,15 +18,15 @@ function App() {
         <div>
           <h1>Work Task Manager</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            Organize and track your work tasks
           </p>
         </div>
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => setCompletedTaskCount((previousCount) => previousCount + 1)}
         >
-          Count is {count}
+          Tasks completed: {completedTaskCount} 
         </button>
       </section>
 
